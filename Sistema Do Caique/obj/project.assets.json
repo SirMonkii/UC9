@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sinni\\Desktop\\Sistema Do Caique\\Sistema Do Caique.csproj",
+      "projectUniqueName": "C:\\Users\\sinni\\Documents\\GitHub\\SA2-ENCONTRO-REMOTO-2\\Sistema Do Caique\\Sistema Do Caique.csproj",
       "projectName": "Sistema Do Caique",
-      "projectPath": "C:\\Users\\sinni\\Desktop\\Sistema Do Caique\\Sistema Do Caique.csproj",
+      "projectPath": "C:\\Users\\sinni\\Documents\\GitHub\\SA2-ENCONTRO-REMOTO-2\\Sistema Do Caique\\Sistema Do Caique.csproj",
       "packagesPath": "C:\\Users\\sinni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sinni\\Desktop\\Sistema Do Caique\\obj\\",
+      "outputPath": "C:\\Users\\sinni\\Documents\\GitHub\\SA2-ENCONTRO-REMOTO-2\\Sistema Do Caique\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sinni\\AppData\\Roaming\\NuGet\\NuGet.Config"

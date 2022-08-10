@@ -10,6 +10,7 @@ namespace Sistema_Do_Caique
         public string CNPJ { get; set; }
 
         public string razaoSocial { get; set; }
-  
+
+        public override void PagarImposto(float rendimento){}
     }
 }
