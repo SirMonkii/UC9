@@ -8,15 +8,12 @@
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine(@$"
-            =========================================
-            !                                       !
-            !        Bem vindo ao Sistema           !
-            !      de cadastros de pessoas fisicas  !
-            !        e pessoas juridicas            !
-            !                                       !
-            !                                       !
-            !                                       !
-            =========================================
+            ==========================================
+            !                                        !
+            !    Bem vindo ao Sistema de cadastros   !
+            ! de pessoas fisicas e pessoas juridicas !
+            !                                        !
+            ==========================================
             ");
             Console.Write("Iniciando ");
             for (var contador = 0; contador < 10; contador++)
@@ -34,6 +31,7 @@
             =========================================
             !      Escolha uma das opcoes abaixo    !
             =========================================
+            !                                       !
             !           1 - Pessoa Fisica           !
             !           2 - Pessoa Juridica         !
             !                                       !
