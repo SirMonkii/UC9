@@ -11,7 +11,7 @@ namespace Sistema_Do_Caique
         public int numero { get; set; }
         public string complemento { get; set; }
         public bool enderecoComercial { get; set; }
-        
-        
+
+
     }
 }
