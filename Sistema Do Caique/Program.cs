@@ -5,6 +5,20 @@
 
         static void Main(string[] args)
         {
+
+            static void BarraCarregamento(string texto)
+            {
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.Write(texto);
+                for (var contador = 0; contador < 10; contador++)
+                {
+                    Thread.Sleep(300);
+                    Console.Write("#");
+                };
+            }
+
+
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine(@$"
@@ -15,16 +29,12 @@
             !                                        !
             ==========================================
             ");
-            Console.Write("Iniciando ");
-            for (var contador = 0; contador < 10; contador++)
-            {
-                Thread.Sleep(300);
-                Console.Write("#");
-            };
-            Console.Clear();
             
+
+            BarraCarregamento("Iniciando ");
+
             string? opcao;
-            
+
             do
             {
                 Console.WriteLine(@$"
@@ -45,10 +55,44 @@
                 switch (opcao)
                 {
                     case "1":
+                        Endereco endPf = new Endereco();
+
+                        endPf.logradouro = "Rua X";
+                        endPf.numero = 100;
+                        endPf.complemento = "Qualquer coisa";
+                        endPf.enderecoComercial = false;
+
+                        PessoaFisica Lucas = new PessoaFisica();
+                        Lucas.endereco = endPf;
+                        Lucas.nome = "Lucas Rodriguez Sinni";
+                        Lucas.CPF = "6565151";
+                        Lucas.dataNascimento = new DateTime(2004, 08, 21);
+
+                        Console.WriteLine(Lucas.CPF);
+                        Console.WriteLine(Lucas.dataNascimento.ToString("dd/MM/yyyy"));
                         break;
+
                     case "2":
+                        Endereco endPj = new Endereco();
+
+                        endPj.logradouro = "Rua X";
+                        endPj.numero = 100;
+                        endPj.complemento = "Qualquer coisa";
+                        endPj.enderecoComercial = true;
+
+                        PessoaJuridica pj = new PessoaJuridica();
+                        pj.CNPJ = "151515151515150001";
+                        pj.endereco = endPj;
+                        pj.razaoSocial = "Pessoa Juridica";
+                        pj.nome = "Jequiti";
+
+                        Console.WriteLine(pj.CNPJ);
                         break;
+
                     case "0":
+                        Console.WriteLine("Obrigado por ultilizar o nosso sistema");
+                        BarraCarregamento("Finalizando ");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         break;
                     default:
                         Console.WriteLine("O VASCAINO DESGRACADO TU EH BURRO?");
@@ -60,9 +104,12 @@
             Console.ResetColor();
 
         }
+
+
+
         /* static void Main(string[] args)
          {
-             Endereco end = new Endereco();
+             Endereco endPf = new Endereco();
              end.logradouro = "Rua X";
              end.numero = 100;
              end.complemento = "Qualquer coisa";
