@@ -34,9 +34,43 @@ namespace Sistema_Do_Caique
             else if (rendimento > 10000)
             {
                 return rendimento * 10 / 100;
-            }else{
+            }
+            else
+            {
                 return 0;
             }
+        }
+        public string caminho { get; private set; } = "Database/PessoaJuridica.csv";
+        //Criar o Database e o caminho para o mesmo
+
+        public void Inserir(PessoaJuridica pj)
+        {
+            VerificarPastaArquivo(caminho);
+
+            string[] pjstring = { $"{pj.nome}, {pj.CNPJ}, {pj.razaoSocial}" };
+
+            File.AppendAllLines(caminho, pjstring);
+        }
+
+        public List<PessoaJuridica> Ler()
+        {
+            List<PessoaJuridica> listapj = new List<PessoaJuridica>();
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach (string cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(",");
+
+                PessoaJuridica cadaPj = new PessoaJuridica();
+
+                cadaPj.nome = atributos[0];
+                cadaPj.CNPJ = atributos[1];
+                cadaPj.razaoSocial = atributos[2];
+
+                listapj.Add(cadaPj);
+        
+            }
+            return listapj;
         }
     }
 }
